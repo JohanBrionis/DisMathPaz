@@ -53,23 +53,34 @@
             background-color: #0056b3;
         }
 
-        .menu-nav {
-            text-decoration: none;
-            color: #fff;
+        nav {
+            width: 100%;
             background-color: #0056b3;
+        }
+        .menu-nav {
             display: flex;
             justify-content: space-between;
-            padding: 20px;
-            width: 100%;
+            align-items: center;
+            padding: 10px 20px;
             box-sizing: border-box;
         }
-
         .menu-nav a {
             color: #fff;
             font-weight: bold;
             text-decoration: none;
-            margin: 5px;
-            padding-right: 50px;
+            margin-right: 20px;
+        }
+        .menu-nav a:hover {
+            text-decoration: underline;
+        }
+        .logo a {
+            color: #fff;
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .logo a:hover {
+            text-decoration: underline;
         }
 
         .logo {
@@ -90,18 +101,21 @@
                 transform: translateY(0px);
             }
         }
+
+        .logo:hover {
+            animation: vibrate 1s infinite linear both} @keyframes vibrate{0%{transform:translate(0)}20%{transform:translate(-2px,2px)}40%{transform:translate(-2px,-2px)}60%{transform:translate(2px,2px)}80%{transform:translate(2px,-2px)}100%{transform:translate(0)}
+        }
     </style>
 </head>
 <body>
     <nav>
-        <div class="container-menu">			
-            <div class="menu-nav">
-                <div class="logo">
-                    <a href="index.html">DisMathPaz</a>
-                </div>
+        <div class="menu-nav">
+            <div class="logo">
+                <a href="index.html">DisMathPaz</a>
+            </div>
+            <div>
                 <a href="index.html">Inicio</a>
-                <a href="conversiones.html">Conversiones</a>
-                <a href="#">Práctica</a>
+                <a href="practica.html">Práctica</a>
                 <a href="#">Parciales</a>
                 <a href="#">Quiz</a>
             </div>

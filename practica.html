@@ -3,81 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práctica</title>
+    <title>Conversión de Sistemas Numéricos</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
             margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
         }
         .container {
+            max-width: 800px;
+            margin: 20px auto;
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            width: 100%;
         }
-        .input-group {
+        h1, h2, p {
             margin-bottom: 10px;
         }
-        .input-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .input-group select {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        #exerciseContainer {
+        #exercise, #result, #explanation {
             margin-bottom: 20px;
+            padding: 20px;
+            background-color: #e9e9e9;
+            border-radius: 5px;
         }
         button {
             padding: 10px 20px;
             border: none;
-            background-color: #007bff;
+            background-color: #0056b3;
             color: #fff;
             cursor: pointer;
             border-radius: 5px;
-            margin-right: 10px;
+            transition: background-color 0.3s ease;
         }
         button:hover {
+            background-color: #004080;
+            animation: shadow-drop-center 0.4s linear both} @keyframes shadow-drop-center{0%{box-shadow:0 0 0 0 transparent}100%{box-shadow:0 0 40px 0 rgba(53, 53, 53, 0.55)}
+        }
+        nav {
+            width: 100%;
             background-color: #0056b3;
         }
-        .output {
-            padding: 10px;
-            background-color: #e0e0e0;
-            border-radius: 5px;
-            display: none;
-            margin-top: 10px;
+        .menu-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+        .menu-nav a {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .menu-nav a:hover {
+            text-decoration: underline;
+        }
+        .logo a {
+            color: #fff;
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .logo a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            font-size: 25px;
+            text-decoration: underline;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            animation: float 2s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-4px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .logo:hover {
+            animation: vibrate 1s infinite linear both} @keyframes vibrate{0%{transform:translate(0)}20%{transform:translate(-2px,2px)}40%{transform:translate(-2px,-2px)}60%{transform:translate(2px,2px)}80%{transform:translate(2px,-2px)}100%{transform:translate(0)}
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Práctica</h1>
-        <div class="input-group">
-            <label for="practiceType">Tipo de Práctica:</label>
-            <select id="practiceType">
-                <option value="decimalToBinary">Decimal a Binario</option>
-                <option value="binaryToDecimal">Binario a Decimal</option>
-                <option value="binaryAddition">Suma Binaria</option>
-                <option value="binarySubtraction">Resta Binaria</option>
-                <option value="decimalToOctal">Decimal a Octal</option>
-                <option value="octalToDecimal">Octal a Decimal</option>
-                <option value="decimalToHexadecimal">Decimal a Hexadecimal</option>
-                <option value="hexadecimalToDecimal">Hexadecimal a Decimal</option>
-            </select>
+    <nav>
+        <div class="menu-nav">
+            <div class="logo">
+                <a href="index.html">DisMathPaz</a>
+            </div>
+            <div>
+                <a href="index.html">Inicio</a>
+                <a href="calculadora.html">Calculadora</a>
+                <a href="#">Parciales</a>
+                <a href="#">Quiz</a>
+            </div>
         </div>
-        <div id="exerciseContainer"></div>
-        <button onclick="showExercise()">Nuevo Ejercicio</button>
-        <button onclick="showAnswer()">Ver Respuesta</button>
-        <div class="output" id="answerOutput"></div>
+    </nav>
+    <div class="container">
+        <div id="exercise">
+            <p>Convierte el: <span id="number"></span> desde <span id="source-system"></span> a <span id="target-system"></span></p>
+        </div>
+        <button id="generate-exercise-btn">Generar Ejercicio</button>
+        <button id="show-result-btn" style="display:none;">Ver Resultado</button>
+        <div id="result" style="display:none;">
+            <p>Resultado: <span id="converted-number"></span></p>
+        </div>
+        <div id="explanation" style="display:none;">
+            <h2>Explicación Paso a Paso</h2>
+            <pre id="conversion-explanation"></pre>
+        </div>
     </div>
 
     <script src="practica.js"></script>
