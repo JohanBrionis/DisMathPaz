@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría de Conversión de Sistemas Numéricos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin-top: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        caption {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        thead {
+            background-color: #4CAF50;
+            color: white;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+        footer {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 10px 20px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Teoría de Conversión de Sistemas Numéricos</h1>
+        
+        <h2>Conversión de Binario a Decimal</h2>
+        <p>Para convertir un número binario a decimal, se multiplica cada dígito por 2 elevado a la posición del dígito (empezando desde 0 desde la derecha) y luego se suman todos los valores.</p>
+        <p><strong>Ejemplo:</strong> Convertir 1010 a decimal:</p>
+        <p>1×2^3 + 0×2^2 + 1×2^1 + 0×2^0 = 8 + 0 + 2 + 0 = 10</p>
+
+        <h2>Conversión de Decimal a Binario</h2>
+        <p>Para convertir un número decimal a binario, se divide el número por 2 y se anota el residuo. Se continúa dividiendo el cociente por 2 hasta que el cociente sea 0. El número binario se obtiene tomando los residuos desde el último al primero.</p>
+        <p><strong>Ejemplo:</strong> Convertir 10 a binario:</p>
+        <p>10 ÷ 2 = 5, residuo 0<br>5 ÷ 2 = 2, residuo 1<br>2 ÷ 2 = 1, residuo 0<br>1 ÷ 2 = 0, residuo 1<br>Número binario: 1010</p>
+
+        <h2>Conversión de Binario a Octal</h2>
+        <p>Para convertir un número binario a octal, se agrupan los dígitos binarios en grupos de tres empezando desde la derecha. Cada grupo se convierte a su equivalente octal.</p>
+        <p><strong>Ejemplo:</strong> Convertir 1010 a octal:</p>
+        <p>Agrupar: 001 010<br>001 en octal es 1<br>010 en octal es 2<br>Número octal: 12</p>
+
+        <h2>Conversión de Octal a Binario</h2>
+        <p>Para convertir un número octal a binario, se convierte cada dígito octal a su equivalente binario de tres bits.</p>
+        <p><strong>Ejemplo:</strong> Convertir 12 a binario:</p>
+        <p>1 en binario es 001<br>2 en binario es 010<br>Número binario: 001010</p>
+
+        <h2>Conversión de Binario a Hexadecimal</h2>
+        <p>Para convertir un número binario a hexadecimal, se agrupan los dígitos binarios en grupos de cuatro empezando desde la derecha. Cada grupo se convierte a su equivalente hexadecimal.</p>
+        <p><strong>Ejemplo:</strong> Convertir 1010 a hexadecimal:</p>
+        <p>Agrupar: 1010<br>1010 en hexadecimal es A<br>Número hexadecimal: A</p>
+
+        <h2>Conversión de Hexadecimal a Binario</h2>
+        <p>Para convertir un número hexadecimal a binario, se convierte cada dígito hexadecimal a su equivalente binario de cuatro bits.</p>
+        <p><strong>Ejemplo:</strong> Convertir A a binario:</p>
+        <p>A en binario es 1010<br>Número binario: 1010</p>
+
+        <h2>Conversión de Decimal a Hexadecimal</h2>
+        <p>Para convertir un número decimal a hexadecimal, se divide el número por 16 y se anota el residuo. Se continúa dividiendo el cociente por 16 hasta que el cociente sea 0. El número hexadecimal se obtiene tomando los residuos desde el último al primero.</p>
+        <p><strong>Ejemplo:</strong> Convertir 26 a hexadecimal:</p>
+        <p>26 ÷ 16 = 1, residuo 10 (A)<br>1 ÷ 16 = 0, residuo 1<br>Número hexadecimal: 1A</p>
+
+        <h2>Conversión de Hexadecimal a Decimal</h2>
+        <p>Para convertir un número hexadecimal a decimal, se multiplica cada dígito por 16 elevado a la posición del dígito (empezando desde 0 desde la derecha) y luego se suman todos los valores.</p>
+        <p><strong>Ejemplo:</strong> Convertir 1A a decimal:</p>
+        <p>1×16^1 + A×16^0 = 16 + 10 = 26</p>
+
+        <table>
+            <caption>Tabla de Conversión de Sistemas Numéricos</caption>
+            <thead>
+                <tr>
+                    <th>Conversión</th>
+                    <th>Ejemplo</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Binario a Decimal</td>
+                    <td>1010</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Decimal a Binario</td>
+                    <td>10</td>
+                    <td>1010</td>
+                </tr>
+                <tr>
+                    <td>Binario a Octal</td>
+                    <td>1010</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Octal a Binario</td>
+                    <td>12</td>
+                    <td>001010</td>
+                </tr>
+                <tr>
+                    <td>Binario a Hexadecimal</td>
+                    <td>1010</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Hexadecimal a Binario</td>
+                    <td>A</td>
+                    <td>1010</td>
+                </tr>
+                <tr>
+                    <td>Decimal a Hexadecimal</td>
+                    <td>26</td>
+                    <td>1A</td>
+                </tr>
+                <tr>
+                    <td>Hexadecimal a Decimal</td>
+                    <td>1A</td>
+                    <td>26</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>Unipaz</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
