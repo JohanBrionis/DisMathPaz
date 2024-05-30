@@ -8,31 +8,73 @@
         body {
             font-family: Arial, sans-serif;
             height: 100vh;
-            margin: 0;
-            background: url('https://1.bp.blogspot.com/-mQZOCiuvL0g/VhP6imJXwKI/AAAAAAAAFOA/k059S1pxkRY/s1600/Unipaz%2B3.jpg') no-repeat center center fixed;
-            background-size: cover;
-            position: relative;
-            overflow: hidden;
+            background-color: #f0f0f0;
+            margin-left: 1rem;
+            margin-right: 1rem;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
         }
-
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
+        nav {
+            width: 100%;
+            background-color: #0056b3;
+        }
+        .menu-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+        .menu-nav a {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .menu-nav a:hover {
+            text-decoration: underline;
+        }
+        .logo a {
+            color: #fff;
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .logo a:hover {
+            text-decoration: underline;
         }
 
-        body * {
-            position: relative;
-            z-index: 2;
+        .logo {
+            font-size: 25px;
+            text-decoration: underline;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            animation: float 2s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-4px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .logo:hover {
+            animation: vibrate 1s infinite linear both;
+        }
+
+        @keyframes vibrate {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
         }
 
         .container {
@@ -40,6 +82,9 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin-top: 20px;
+            width: 100%;
         }
         .input-group {
             margin-bottom: 10px;
@@ -70,104 +115,376 @@
         button:hover {
             background-color: #0056b3;
         }
-
-        .menu-principal {
-            text-decoration: none;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-            flex-wrap: wrap;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
-
-        .menu-principal a {
-            color: #fff;
-            border: #0068b3;
-            background-color: rgba(12, 79, 155, 0.258);
-            border-style: solid;
-            border-radius: 40px;
+        caption {
+            font-size: 1.5em;
+            margin-bottom: 10px;
             font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.075);
-            padding: 20px;
-            margin: 20px;
+            color: #333;
         }
-      
-        .menu-principal a:hover {
-            background-color: #4397f0;
+        thead {
+            background-color: #4CAF50;
+            color: white;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+        footer {
+            background-color: #0056b3;
             color: #fff;
-            border: #fff;
-            border-style: solid;
-            transition-duration: 1s;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.872);
-        }
-
-        .logo {
-            font-size: 6rem;
-            text-decoration: none;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            animation: float 2s infinite;
-            color: #fff;
-            padding-top: 20px;
-            display: flex;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-4px);
-            }
-            100% {
-                transform: translateY(0px);
-            }
+            padding: 10px 20px;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
-            .menu-principal {
+            .menu-nav {
                 flex-direction: column;
+                align-items: flex-start;
             }
-
-            .menu-principal a {
-                margin: 10px;
-                padding: 15px;
-                width: 80%;
-                text-align: center;
+            .menu-nav a {
+                margin: 5px 0;
             }
-
             .logo {
-                font-size: 3rem;
+                font-size: 20px;
             }
         }
 
-        @media (max-width: 480px) {
-            .menu-principal a {
-                margin: 5px;
+        @media (max-width: 576px) {
+            .menu-nav {
                 padding: 10px;
-                width: 90%;
-                text-align: center;
             }
-
-            .logo {
-                font-size: 2rem;
+            .menu-nav a {
+                font-size: 14px;
+                margin-right: 10px;
+            }
+            .logo a {
+                font-size: 20px;
+            }
+            .container {
+                padding: 10px;
+            }
+            th, td {
+                padding: 8px;
             }
         }
-
     </style>
 </head>
 <body>
-    <a href="#" class="logo">DisMathPaz</a>
     <nav>
-        <div class="menu-principal">            
-            <a href="index.html">Sistemas numericos</a>
-            <a href="#">Conjuntos</a>
-            <a href="#">Algebra Booleana</a>
+        <div class="menu-nav">
+            <div class="logo">
+                <a href="inicio.html">DisMathPaz</a>
+            </div>
+            <div>
+                <a href="calculadora.html">Calculadora</a>
+                <a href="practica.html">Práctica</a>
+                <a href="#">Parciales</a>
+                <a href="#">Quiz</a>
+            </div>
         </div>
     </nav>
 
+    <div class="container">
+        <h1>SISTEMAS NUMÉRICOS</h1>
+        <p>Un sistema de numeración es un conjunto de símbolos y reglas que permiten representar datos numéricos. Los sistemas de numeración actuales son sistemas posicionales, que se caracterizan porque un símbolo tiene distinto valor según la posición que ocupa en la cifra.</p>
+        <br>
 
+        <table>
+            <caption>Tabla de Sistemas Numéricos</caption>
+            <thead>
+                <tr>
+                    <th>Sistema</th>
+                    <th>Base</th>
+                    <th>Ejemplo</th>
+                    <th>Símbolos/Números</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Binario</td>
+                    <td>2</td>
+                    <td>1010</td>
+                    <td>0, 1</td>
+                </tr>
+                <tr>
+                    <td>Octal</td>
+                    <td>8</td>
+                    <td>12</td>
+                    <td>0-7</td>
+                </tr>
+                <tr>
+                    <td>Decimal</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>0-9</td>
+                </tr>
+                <tr>
+                    <td>Hexadecimal</td>
+                    <td>16</td>
+                    <td>A</td>
+                    <td>0-9, A-F</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <hr>
+        <h2>Binario</h2>
+        <p>El sistema binario utiliza solo dos símbolos: 0 y 1. Es fundamental en la informática porque las computadoras operan internamente con dos estados: encendido (1) y apagado (0).</p>
+        <p><strong>Ejemplo:</strong> El número binario 1010 es igual a 10 en decimal.</p>
+
+        <h2>Octal</h2>
+        <p>El sistema octal usa ocho símbolos: del 0 al 7. Es utilizado en algunas aplicaciones informáticas como una representación más corta del binario.</p>
+        <p><strong>Ejemplo:</strong> El número octal 12 es igual a 10 en decimal.</p>
+
+        <h2>Decimal</h2>
+        <p>El sistema decimal es el más utilizado en la vida diaria y usa diez símbolos: del 0 al 9.</p>
+        <p><strong>Ejemplo:</strong> El número decimal 10 representa el valor diez.</p>
+
+        <h2>Hexadecimal</h2>
+        <p>El sistema hexadecimal usa dieciséis símbolos: del 0 al 9 y las letras A a F (donde A=10, B=11, ..., F=15). Es muy utilizado en informática para simplificar la representación de datos binarios.</p>
+        <p><strong>Ejemplo:</strong> El número hexadecimal A es igual a 10 en decimal.</p>
+        <br>
+        <hr>
+        <h1>Teoría de Conversión de Sistemas Numéricos</h1>
+        
+        <h2>Conversión de Binario a Decimal</h2>
+        <p>Para convertir un número binario a decimal, se multiplica cada dígito por 2 elevado a la posición del dígito (empezando desde 0 desde la derecha) y luego se suman todos los valores.</p>
+        <p><strong>Ejemplo:</strong> Convertir 1010 a decimal:</p>
+        <p>1×2^3 + 0×2^2 + 1×2^1 + 0×2^0 = 8 + 0 + 2 + 0 = 10</p>
+
+        <h2>Conversión de Decimal a Binario</h2>
+        <p>Para convertir un número decimal a binario, se divide el número por 2 y se anota el residuo. Se continúa dividiendo el cociente por 2 hasta que el cociente sea 0. El número binario se obtiene tomando los residuos desde el último al primero.</p>
+        <p><strong>Ejemplo:</strong> Convertir 10 a binario:</p>
+        <p>10 ÷ 2 = 5, residuo 0<br>5 ÷ 2 = 2, residuo 1<br>2 ÷ 2 = 1, residuo 0<br>1 ÷ 2 = 0, residuo 1<br>Número binario: 1010</p>
+
+        <h2>Conversión de Binario a Octal</h2>
+        <p>Para convertir un número binario a octal, se agrupan los dígitos binarios en grupos de tres empezando desde la derecha. Cada grupo se convierte a su equivalente octal.</p>
+        <p><strong>Ejemplo:</strong> Convertir 1010 a octal:</p>
+        <p>Agrupar: 001 010<br>001 en octal es 1<br>010 en octal es 2<br>Número octal: 12</p>
+
+        <h2>Conversión de Octal a Binario</h2>
+        <p>Para convertir un número octal a binario, se convierte cada dígito octal a su equivalente binario de tres bits.</p>
+        <p><strong>Ejemplo:</strong> Convertir 12 a binario:</p>
+        <p>1 en binario es 001<br>2 en binario es 010<br>Número binario: 001010</p>
+
+        <h2>Conversión de Binario a Hexadecimal</h2>
+        <p>Para convertir un número binario a hexadecimal, se agrupan los dígitos binarios en grupos de cuatro empezando desde la derecha. Cada grupo se convierte a su equivalente hexadecimal.</p>
+        <p><strong>Ejemplo:</strong> Convertir 1010 a hexadecimal:</p>
+        <p>Agrupar: 1010<br>1010 en hexadecimal es A<br>Número hexadecimal: A</p>
+
+        <h2>Conversión de Hexadecimal a Binario</h2>
+        <p>Para convertir un número hexadecimal a binario, se convierte cada dígito hexadecimal a su equivalente binario de cuatro bits.</p>
+        <p><strong>Ejemplo:</strong> Convertir A a binario:</p>
+        <p>A en binario es 1010<br>Número binario: 1010</p>
+
+        <h2>Conversión de Decimal a Hexadecimal</h2>
+        <p>Para convertir un número decimal a hexadecimal, se divide el número por 16 y se anota el residuo. Se continúa dividiendo el cociente por 16 hasta que el cociente sea 0. El número hexadecimal se obtiene tomando los residuos desde el último al primero.</p>
+        <p><strong>Ejemplo:</strong> Convertir 26 a hexadecimal:</p>
+        <p>26 ÷ 16 = 1, residuo 10 (A)<br>1 ÷ 16 = 0, residuo 1<br>Número hexadecimal: 1A</p>
+
+        <h2>Conversión de Hexadecimal a Decimal</h2>
+        <p>Para convertir un número hexadecimal a decimal, se multiplica cada dígito por 16 elevado a la posición del dígito (empezando desde 0 desde la derecha) y luego se suman todos los valores.</p>
+        <p><strong>Ejemplo:</strong> Convertir 1A a decimal:</p>
+        <p>1×16^1 + A×16^0 = 16 + 10 = 26</p>
+
+        <br>
+        <hr>
+        <table>
+            <caption>Tabla de Conversión de Sistemas Numéricos</caption>
+            <thead>
+                <tr>
+                    <th>Conversión</th>
+                    <th>Ejemplo</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Binario a Decimal</td>
+                    <td>1010</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Decimal a Binario</td>
+                    <td>10</td>
+                    <td>1010</td>
+                </tr>
+                <tr>
+                    <td>Binario a Octal</td>
+                    <td>1010</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Octal a Binario</td>
+                    <td>12</td>
+                    <td>001010</td>
+                </tr>
+                <tr>
+                    <td>Binario a Hexadecimal</td>
+                    <td>1010</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Hexadecimal a Binario</td>
+                    <td>A</td>
+                    <td>1010</td>
+                </tr>
+                <tr>
+                    <td>Decimal a Hexadecimal</td>
+                    <td>26</td>
+                    <td>1A</td>
+                </tr>
+                <tr>
+                    <td>Hexadecimal a Decimal</td>
+                    <td>1A</td>
+                    <td>26</td>
+                </tr>
+            </tbody>
+        </table>
+    <br>
+    <hr>
+    <h1>Operaciones en Binario</h1>
+
+        <h2>Suma de Binarios</h2>
+        <p>La suma de números binarios sigue reglas similares a la suma decimal pero solo con dos dígitos: 0 y 1. Las reglas básicas son:</p>
+        <ul>
+            <li>0 + 0 = 0</li>
+            <li>0 + 1 = 1</li>
+            <li>1 + 0 = 1</li>
+            <li>1 + 1 = 10 (0 y llevamos 1)</li>
+        </ul>
+        <p><strong>Ejemplo:</strong> Sumar 1011 y 1101</p>
+        <pre>
+          1011
+        + 1101
+        ------
+         11000
+        </pre>
+        <p>Explicación:</p>
+        <pre>
+          1 + 1 = 10 (0 y llevamos 1)
+          1 + 0 + 1 (llevado) = 10 (0 y llevamos 1)
+          0 + 1 + 1 (llevado) = 10 (0 y llevamos 1)
+          1 + 1 (llevado) = 10 (0 y llevamos 1)
+          Resultado final: 11000
+        </pre>
+        
+        <hr>
+
+        <h2>Resta de Binarios</h2>
+        <p>La resta de números binarios sigue reglas similares a la resta decimal pero solo con dos dígitos: 0 y 1. Las reglas básicas son:</p>
+        <ul>
+            <li>0 - 0 = 0</li>
+            <li>1 - 0 = 1</li>
+            <li>1 - 1 = 0</li>
+            <li>0 - 1 = 1 (pedimos prestado 1 de la siguiente columna a la izquierda)</li>
+        </ul>
+        <p><strong>Ejemplo:</strong> Restar 1101 de 10111</p>
+        <pre>
+          10111
+        - 01101
+        -------
+           10010
+        </pre>
+        <p>Explicación:</p>
+        <pre>
+          1 - 1 = 0
+          1 - 0 = 1
+          1 - 1 = 0
+          0 - 1 (pedimos prestado, 10 - 1) = 1, y el siguiente 1 se convierte en 0
+          1 - 0 = 1
+          Resultado final: 10010
+        </pre>
+        
+        <hr>
+
+        <h2>Multiplicación de Binarios</h2>
+        <p>La multiplicación binaria sigue las mismas reglas que la multiplicación decimal pero solo con dos dígitos: 0 y 1. Las reglas básicas son:</p>
+        <ul>
+            <li>0 × 0 = 0</li>
+            <li>0 × 1 = 0</li>
+            <li>1 × 0 = 0</li>
+            <li>1 × 1 = 1</li>
+        </ul>
+        <p><strong>Ejemplo:</strong> Multiplicar 101 por 11</p>
+        <pre>
+            101
+          ×  11
+        ------
+           101   (101 × 1)
+        + 101   (101 × 1, primer espacio vacio)
+        ------
+          1111
+        </pre>
+        <p>Explicación:</p>
+        <pre>
+          101 × 1 = 101
+          101 × 1 = 1010 (dejamos el primer espacio vacio)
+          Sumamos los resultados:  1111
+          Resultado final: 1111
+        </pre>
+        
+        <hr>
+
+        <h2>División de Binarios</h2>
+        <p>La división binaria es similar a la división larga en decimal. Se resta el divisor al dividendo y se lleva el resultado hacia abajo. Las reglas básicas son:</p>
+        <ul>
+            <li>0 ÷ 1 = 0</li>
+            <li>1 ÷ 1 = 1</li>
+        </ul>
+        <p><strong>Ejemplo:</strong> Dividir 10110 entre 10</p>
+        <pre>
+           1011
+         -----
+        10 | 10110
+           - 10
+         -----
+             11
+             - 10
+         -----
+              10
+              - 10
+         -----
+               0
+        </pre>
+        <p>Explicación:</p>
+        <pre>
+          10 entra en 10 una vez, damos un 1 en el cociente.
+          Restamos 10 de 10, obtenemos 0 y bajamos el siguiente 1.
+          10 entra en 11 una vez, damos un 1 en el cociente.
+          Restamos 10 de 11, obtenemos 1 y bajamos el siguiente 0.
+          10 entra en 10 una vez, damos un 1 en el cociente.
+          Restamos 10 de 10, obtenemos 0.
+          Resultado final: 1011
+        </pre>
+        </div>
+    </div>
+</div>
+
+    
+
+    <footer>
+        <p>Proyecto de primer semestre por: <br>Johan Brionis, Carlos Rangel, Enoc Diaz
+            <br>Unipaz - 2024
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
