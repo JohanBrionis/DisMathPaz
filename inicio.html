@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Conversión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            background: url('https://1.bp.blogspot.com/-mQZOCiuvL0g/VhP6imJXwKI/AAAAAAAAFOA/k059S1pxkRY/s1600/Unipaz%2B3.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        body * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .input-group {
+            margin-bottom: 10px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .output {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .menu-principal {
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .menu-principal a {
+            color: #fff;
+            border: #0068b3;
+            background-color: rgba(12, 79, 155, 0.258);
+            border-style: solid;
+            border-radius: 40px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.075);
+            padding: 20px;
+            margin: 20px;
+        }
+      
+        .menu-principal a:hover {
+            background-color: #4397f0;
+            color: #fff;
+            border: #fff;
+            border-style: solid;
+            transition-duration: 1s;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.872);
+        }
+
+        .logo {
+            font-size: 6rem;
+            text-decoration: none;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            animation: float 2s infinite;
+            color: #fff;
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-4px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-principal {
+                flex-direction: column;
+            }
+
+            .menu-principal a {
+                margin: 10px;
+                padding: 15px;
+                width: 80%;
+                text-align: center;
+            }
+
+            .logo {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-principal a {
+                margin: 5px;
+                padding: 10px;
+                width: 90%;
+                text-align: center;
+            }
+
+            .logo {
+                font-size: 2rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#" class="logo">DisMathPaz</a>
+    <nav>
+        <div class="menu-principal">            
+            <a href="index.html">Sistemas numericos</a>
+            <a href="#">Conjuntos</a>
+            <a href="#">Algebra Booleana</a>
+        </div>
+    </nav>
+
+
+</body>
+</html>
