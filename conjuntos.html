@@ -1,0 +1,185 @@
+Aquí tienes la página web completa con toda la teoría añadida:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría de Conjuntos en Matemáticas Discretas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        nav {
+            width: 100%;
+            background-color: #0056b3;
+        }
+        .menu-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+        .menu-nav a {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .menu-nav a:hover {
+            text-decoration: underline;
+        }
+        .logo a {
+            color: #fff;
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .logo a:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            font-size: 25px;
+            text-decoration: underline;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            animation: float 2s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-4px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .logo:hover {
+            animation: vibrate 1s infinite linear both;
+        }
+
+        @keyframes vibrate {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        ul li {
+            list-style-type: disc;
+            margin-bottom: 5px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+  <nav>
+        <div class="menu-nav">
+            <div class="logo">
+                <a href="index.html">DisMathPaz</a>
+            </div>
+            <div>
+                <a href="prac-conj.html">Práctica</a>
+                <a href="parcial.html">Parciales</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Teoría de Conjuntos en Matemáticas Discretas</h1>
+        <p>Un conjunto en matemáticas discretas es un grupo de elementos únicos e irrepetibles, que pueden ser finitos o infinitos y cuyos elementos pueden ser cualquier valor como números, letras, e incluso, objetos del mundo real.</p>
+        <p>Otra definición puede ser:</p>
+        <blockquote>
+            <p>"Un conjunto es la reunión en un todo de objetos de nuestra intuición o de nuestro pensar, bien determinados y diferenciables los unos de los otros." - Georg Cantor (1845-1918)</p>
+        </blockquote>
+        <p>Por ejemplo, podemos decir que las letras del abecedario son un conjunto porque cada letra es única, irrepetible y bien diferenciada una de otra.</p>
+        <h2>Determinación de un conjunto por extensión o comprensión</h2>
+        <p>Básicamente, la determinación de un conjunto puede ser por extensión o por comprensión.</p>
+        <p><strong>Ejemplo de determinación de un conjunto por extensión:</strong></p>
+        <ul>
+            <li>A = {vocales}</li>
+            <li>B = {a, e, i, o, u}</li>
+        </ul>
+        <p><strong>Ejemplo de determinación de un conjunto por comprensión o forma constructiva:</strong></p>
+        <ul>
+            <li>A = {v | v es una vocal}</li>
+            <li>B = {n | n es un número natural menor que 10}</li>
+        </ul>
+        <p>El símbolo | se lee como “tal que”, o sea, el conjunto A es igual al elemento “v” tal que el elemento (s) “v” es una vocal.</p>
+        <p>Como puedes ver, ya no colocamos la lista de los elementos sino que colocamos una condición que deben cumplir, esto es especialmente útil cuando queremos expresar conjuntos que tienen tantos elementos que sería impráctico enlistarlos uno a uno.</p>
+        <h2>Teoría de conjuntos diagrama de venn</h2>
+        <p>Para ejemplos gráficos, en teoría de conjuntos se utilizan los diagramas de Venn para representar conjuntos, lo que puede ayudar a comprender mejor lo que es la teoría de conjuntos en matemáticas.</p>
+        <img src="https://matematicasdiscretas.org/wp-content/uploads/2023/01/image-2-300x201.png" alt="Diagrama de Venn en teoría de conjuntos">
+        <p>Donde el conjunto A es el círculo de la izquierda, el conjunto B el de la derecha, y la parte de en medio donde se combinan, representa los elementos que están en común entre A y B.</p>
+        <p>¿De qué te puede servir esto? Pues bien, esto es el fundamento que necesitas saber para resolver ejemplos y ejercicios de teoría de conjuntos.</p>
+        <h2>Relación entre conjuntos y elementos en matemáticas</h2>
+        <p>La noción de conjuntos y elementos es más fácil de entender si consideramos que un conjunto está formado por elementos.</p>
+        <p>Es decir, la diferencia entre conjuntos y elementos es que un elemento es individual que puede formar parte de un conjunto.</p>
+        <p><strong>Ejemplos de conjuntos y elementos:</strong></p>
+        <ul>
+            <li>A = {1, 2, 3}</li>
+        </ul>
+        <p>¿Cuáles son los elementos del conjunto A? la respuesta es: 1, 2 y 3.</p>
+        <p>Con esto en mente, podemos declarar una relación entre conjuntos y elementos, como “pertenece a” y “no pertenece a”:</p>
+        <ul>
+            <li>1 pertenece a A = 1 ∈ A</li>
+            <li>4 NO pertenece a A = 4 ∉ A</li>
+        </ul>
+        <p>El símbolo ∉ se lee como “pertenece” y el símbolo ∉ se lee como “no pertenece”. Estos son sólo un ejemplo de simbología de teoría de conjuntos.</p>
+        <h2>Tipos de conjuntos en matemáticas discretas</h2>
+        <p>Podemos clasificar los tipos de conjuntos en matemáticas discretas en base a los elementos que contienen.</p>
+        <ul>
+            <li>Conjunto Nulo o Vacío. Es un tipo de conjunto especial porque expresa que no contiene ningún valor. Puede representar los símbolos: ∅, o también {}.</li>
+            <li>Conjunto Unitario. Es un conjunto que contiene sólo un elemento. A = {1}</li>
+            <li>Conjunto Finito e Infinito. Un conjunto finito contiene elementos con un fin, como las vocales del abecedario. Un conjunto infinito contiene elementos sin fin, como los números naturales.</li>
+            <li>Conjunto Disjuntos. Son conjuntos que no tienen elementos en común o ninguna relación.</li>
+            <li>Conjunto Juntos. Son conjuntos que sí tienen elementos en común o una relación.</li>
+            <li>Subconjunto de un conjunto. Un conjunto puede como elemento a otro conjunto que llamamos subconjunto.</li>
+            <li>Conjunto Potencia o Potencia de un Conjunto. Es un conjunto que contiene a todos los subconjuntos de un conjunto original.</li>
+            <li>Conjunto Universal o universo (U). Es un tipo de conjunto especial que representa a todos los elemento existentes en un contexto dado. Por ejemplo, el universo puede ser todos los números naturales y por dentro, podemos tener un conjunto A = {1, 2, 3}, en este caso, el universo representa todos los números naturales faltantes que no tiene el conjunto A.</li>
+        </ul>
+        <h2>Diagramas de Venn y SQL</h2>
+        <p>Es muy probable que en tu carrera como desarrollador de software necesites usar bases de datos relacionales.</p>
+        <p>Un truco para comprender las instrucciones para relacionar tablas de datos son los diagramas de Venn</p>
+        <img src="https://matematicasdiscretas.org/wp-content/uploads/2023/01/image-3-300x236.png" alt="Diagrama de Venn en operaciones base de datos relacional o SQL">
+        <p>Aunque esto es un ejemplo visual muy ilustrativo, también hay quienes consideran que es más adecuado utilizar otro tipo de diagramas para representar uniones y relaciones porque no son una analogía 100% fidedigna.</p>
+        <p>Por ejemplo, un JOIN no es estrictamente una operación de un conjunto, pero a pesar de ello, usar diagramas de Venn ayuda mucho como ejemplo visual para comprender las queries de bases de datos.</p>
+    </div>
+</body>
+</html>
