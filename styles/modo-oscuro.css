@@ -1,0 +1,34 @@
+/* Modo oscuro */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Estilos adicionales para el modo oscuro */
+.dark-mode a{
+  color: #ffffff;
+}
+
+#logo-font {
+  color: #4bb300;
+}
+
+.dark-mode h1 {
+  color: #ffffff;
+}
+
+.dark-mode h2 {
+  color: #ffffff;
+}
+
+.dark-mode p {
+  color: #ffffff;
+}
+
+.dark-mode img {
+  filter: invert(100);
+}
+
+.dark-mode nav {
+  background-color: #333;
+}

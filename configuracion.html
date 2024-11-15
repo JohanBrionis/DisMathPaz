@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/style-configuracion.css">
+  <link rel="stylesheet" href="/styles/modo-oscuro.css">
+</head>
+<body>
+  <script src="/Components/Nav.js"></script>
+  <script src="/Components/mascot-logo.js"></script>
+  <div class="container">
+    <h1>Ajustes</h1>
+    <!-- Modo noche -->
+    <div id="setting">
+      <label>
+        <input type="checkbox" id="darkModeToggle"> Activar modo noche
+      </label>
+    </div>
+
+    <!-- Idioma -->
+    <div>
+      <label for="languageSelect">Seleccionar idioma</label>
+      <select id="languageSelect">
+        <option value="es">Español</option>
+        <option value="en">Inglés</option>
+      </select>
+    </div>
+
+    <!-- Botón de guardar -->
+    <button id="saveButton">Guardar cambios</button>
+  </div>
+
+</div>
+
+  <script src="/Scripts/configuracion.js"></script>
+
+
+</body>
+</html>

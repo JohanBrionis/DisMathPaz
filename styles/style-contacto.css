@@ -1,0 +1,92 @@
+body {
+  font-family: Georgia, serif;
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+  color: #333; 
+} 
+
+.container {
+  position: relative;
+  left: 120px;
+  width: 50vw;
+  background-color: #1414140d;
+  padding: 60px;
+  margin: 0 auto;
+  height: 80%;
+  margin-bottom: 70px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #003366;
+}
+.contact-info, .contact-form {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.contact-info div {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  color: #555;
+}
+.contact-info div i {
+  margin-right: 10px;
+  color: #003366;
+}
+.contact-form {
+  flex-direction: column;
+}
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+.contact-form button {
+  padding: 15px;
+  background-color: #003366;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #00509e;
+}
+
+
+@media (max-width: 768px) {
+
+.container {
+  position: relative;
+  left: 0;
+  width: 90%;
+  background-color: #1414140d;
+  margin: 0 auto;
+  height: 80%;
+  margin-bottom: 70px;
+}
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}

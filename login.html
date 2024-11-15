@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/style-login.css">
+  <script src="/Scripts/login.js"defer></script>
+</head>
+<body>
+  <script src="/Components/mascot-logo.js"></script>
+  <nav>
+    <a href="#" class="logo-font">CodePaz</a>
+    <div class="container-nav">
+      <a href="registro.html">Registrarse</a>
+      <a href="#">Contacto</a>
+    </div>
+  </nav>
+
+    <main>
+
+      <div class="glass-container">
+        <div class="login-box">
+          <h2>iniciar sesion</h2>
+          <form id="loginform" action="#" onsubmit="return false;" method="post">
+                <input type="text" name="username" id="username" required placeholder="username">
+                <input type="password" id="password" name="password" required placeholder="password">
+                <div class="options">
+                  <label>
+                    <input type="checkbox"> Recordar contraseña
+                  </label>
+                </div>                
+                <button type="submit">iniciar sesion</button>
+            </form>
+            <div class="check">
+              <a href="#">¿Olvidaste tu contraseña?</a>
+              <a href="registro.html" id="registrarse">registrarse</a>
+            </div>
+            <div id="confirmation" style="display:none; margin-top: 20px;">
+              <p><strong>¡Logueado Existosamente!</strong></p>
+              <p id="user-details"></p>
+            </div>
+        </div>
+      </div>
+      
+    </main>
+    
+</body>
+</html>

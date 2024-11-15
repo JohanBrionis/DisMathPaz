@@ -1,0 +1,39 @@
+{
+  "ejercicios": [
+    {
+      "titulo": "Ejercicio 1: HTML básico",
+      "nivel": "Principiante",
+      "descripcion": "Escribe el código correcto para un encabezado principal en HTML.",
+      "respuestaCorrecta": "<h1>\\s*[^<]+\\s*<\\/h1>",
+      "codigoInicial": "<>Titulo Principal</>"
+    },
+    {
+      "titulo": "Ejercicio 2: Etiquetas HTML",
+      "nivel": "Principiante",
+      "descripcion": "Completa el codigo para crear una lista desordenada con tres elementos.",
+      "respuestaCorrecta": "<ul>(\\s*<li>\\s*[^<]+\\s*<\\/li>\\s*){3}<\\/ul>",
+      "codigoInicial": "<>\n <>Item 1</li>\n <li>Item 2</li>\n <li>Item 3</>\n</>"
+    },
+    {
+      "titulo": "Ejercicio 3: Enlaces",
+      "nivel": "Principiante",
+      "descripcion": "Escribe un enlace a Google.",
+      "respuestaCorrecta": "<a\\s+href=\"https:\\/\\/www\\.google\\.com\">\\s*Google\\s*<\\/a>",
+      "codigoInicial": "<a =\"https://www.google.com\">Google</a>"
+    },
+    {
+      "titulo": "Ejercicio 4: Imágenes",
+      "nivel": "Principiante",
+      "descripcion": "Inserta una imagen con una descripción.",
+      "respuestaCorrecta": "<img\\s+src=\"[^\"]*\"\\s+alt=\"[^\"]*\"\\s*\\/?>",
+      "codigoInicial": "<img =\"imagen.png\" =\"Descripción\" />"
+    },
+    {
+      "titulo": "Ejercicio 5: Párrafos",
+      "nivel": "Principiante",
+      "descripcion": "Escribe un párrafo de texto.",
+      "respuestaCorrecta": "<p>\\s*[^<]+\\s*<\\/p>",
+      "codigoInicial": "<>Texto del párrafo aquí.</>"
+    }
+  ]
+}

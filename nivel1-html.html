@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+
+  <!-- CodeMirror CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css"> <!-- Tema oscuro -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/show-hint.min.css"> <!-- Autocompletado CSS -->
+
+  <!-- CodeMirror JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script> <!-- Para HTML -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script> <!-- Para CSS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script> <!-- Para JS -->
+
+  <!-- Autocompletado JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/show-hint.min.js"></script> <!-- Funcionalidad de autocompletar -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/html-hint.min.js"></script> <!-- Autocompletar HTML -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/css-hint.min.js"></script> <!-- Autocompletar CSS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/javascript-hint.min.js"></script> <!-- Autocompletar JS -->
+
+  <title>Ejercicios Dinámicos</title>
+  <link rel="stylesheet" href="styles/style-ejercicios.css">
+  <link rel="stylesheet" href="styles/modo-oscuro.css">
+
+</head>
+<body>
+  <script src="/Components/Nav.js"></script>
+  <script src="/Components/mascot-logo.js"></script>
+  <main>
+    <div class="container-main">
+      <div class="card">
+
+        <h1 id="titulo">Título del Ejercicio</h1>
+        <h2 id="nivel">Nivel</h2>
+        <p id="descripcion">Descripción del ejercicio</p>
+        
+        <!-- Textarea para CodeMirror -->
+        <textarea id="codeEditor" name="codeEditor"></textarea>
+      
+      <div class="botones">
+        <button id="anterior" onclick="cambiarEjercicio(-1)"><</button>
+        <button id="verificar" onclick="verificarCodigo()">Comprobar</button>
+        <button id="siguiente" onclick="cambiarEjercicio(1)">></button>
+      </div>
+      <p id="resultado"></p>
+    </div>      
+  </div>
+      
+      <script src="/Scripts/Ejercicios/Html.js"></script>
+    <script src="/Scripts/configuracion.js"></script>
+  </main>
+</body>
+</html>

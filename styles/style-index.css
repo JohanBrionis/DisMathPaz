@@ -1,0 +1,217 @@
+/* Estilos generales */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+/* Estilos del navbar */
+nav {
+  display: flex;
+  background-color: rgba(240, 248, 255, 0.587);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  height: 60px;
+  border-bottom: solid #ddd;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 400;
+}
+
+nav a:hover {
+  color: #4bb300;
+}
+
+nav .logo-font {
+  color: #4bb300;
+  font-family: "Afacad Flux", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  transition: 0.5s;
+}
+
+nav .logo-font:hover {
+  scale: 1.1;
+}
+
+/* Botón principal */
+.boton {
+  text-decoration: none;
+  background-color: #59dc01;
+  color: #fff;
+  border-radius: 25px;
+  padding: 15px 100px;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.boton:hover {
+  background-color: #4bb300;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.boton:active {
+  background-color: #408c00;
+  box-shadow: none;
+}
+
+main {
+  text-align: center;
+  margin: 0 auto;
+  width: 80vw;
+  min-height: 90vh;
+  position: relative;
+}
+
+.main {
+  border-bottom: solid #ddd;
+  background-color: white;
+}
+
+.info {
+  background-color: snow;
+}
+
+main h1 {
+
+  position: relative;
+  top: 10px;
+  font-size: 2rem;
+  margin: 0 auto;
+  width: 50%;
+  padding: 20px;
+}
+
+main p {
+
+  position: relative;
+  top: 10px;
+  font-style: italic;
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 40%;
+  padding: 20px;
+}
+
+main a {
+  position: relative;
+  top: 100px;
+}
+
+/* Contenedor de las tarjetas */
+.container-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.container-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 45%; 
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.container-card h2 {
+  color: #59dc01;
+  font-family: "Afacad Flux", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.container-card p {
+  color: #333;
+  font-family: "Afacad Flux", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  width: 70%;
+}
+
+.container-card img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .container-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(240, 248, 255, 0.587);
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 90px;
+    border-bottom: solid #ddd;
+  }
+
+  main {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 90vh;
+    position: relative;
+  }
+
+  main h1 {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  main p {
+  
+    position: relative;
+    top: 10px;
+    font-style: italic;
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+  }
+
+  .container-card {
+    width: 70%; 
+    margin-bottom: 20px;
+  }
+
+  .container-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .container-card p {
+    font-size: 1rem;
+  }
+
+  .container-card img {
+    width: 80px;
+    height: 80px;
+  }
+}
